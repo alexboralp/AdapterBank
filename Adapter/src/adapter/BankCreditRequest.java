@@ -13,6 +13,11 @@ public class BankCreditRequest {
     private String customer;
     private double amount;
 
+    public BankCreditRequest() {
+        customer = "";
+        amount = 0;
+    }
+
     public BankCreditRequest(String customer, double amount) {
         this.customer = customer;
         this.amount = amount;
