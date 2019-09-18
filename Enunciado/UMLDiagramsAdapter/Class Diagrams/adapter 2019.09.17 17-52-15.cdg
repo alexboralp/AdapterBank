@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="adapter">
+  <ClassDiagramComponents>
+    <Class name="Adapter" package="adapter" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BankCreditRequest" package="adapter" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="customer" type="String" visibility="private"/>
+        <Field name="amount" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCustomer" returnType="String" visibility="public"/>
+        <Method name="setCustomer" returnType="void" visibility="public">
+          <Argument type="String" name="customer"/>
+        </Method>
+        <Method name="getAmount" returnType="double" visibility="public"/>
+        <Method name="setAmount" returnType="void" visibility="public">
+          <Argument type="double" name="amount"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
