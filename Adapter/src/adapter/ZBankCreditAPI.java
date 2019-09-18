@@ -9,14 +9,14 @@ package adapter;
  *
  * @author aborbon
  */
-public class XBankCreditAPI {
-    public XBankCreditResponse sendCreditRequest(ZBankCreditRequest request) {
-        XBankCreditResponse response = new XBankCreditResponse();
+public class ZBankCreditAPI {
+    public ZBankCreditResponse sendCreditRequest(ZBankCreditRequest request) throws ZBankCreditRejectedException {
+        ZBankCreditResponse response = new ZBankCreditResponse();
         
-        if (request.getRequestAmount() <= 5000) {
+        if (request.getRequestAmount() <= 7000) {
             response.setAproval(true);
         }else{
-            response.setAproval(false);
+            throw new ZBankCreditRejectedException("Crédito rechazado.");
         }
         
         return response;

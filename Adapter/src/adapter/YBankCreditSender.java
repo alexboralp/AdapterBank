@@ -27,7 +27,7 @@ public class YBankCreditSender {
                 }
                 
                 try {
-                    Thread.sleep(1000 * 30);
+                    Thread.sleep(1000 * 15);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(YBankCreditSender.class.getName()).log(Level.SEVERE, null, ex);
                 }

@@ -13,7 +13,7 @@ public class XBankCreditAdaptee implements IBankAdapter{
 
     @Override
     public BankCreditResponse sendCreditRequest(BankCreditRequest request) {
-        XBankCreditRequest xrequest = new XBankCreditRequest();
+        ZBankCreditRequest xrequest = new ZBankCreditRequest();
         xrequest.setCustomerName(request.getCustomer());
         xrequest.setRequestAmount(request.getAmount());
         

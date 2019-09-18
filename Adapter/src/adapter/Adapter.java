@@ -20,7 +20,7 @@ public class Adapter {
         //Request genérico para las dos APIs
         BankCreditRequest request = new BankCreditRequest();
         request.setCustomer("Oscar Blancarte");
-        request.setAmount(10000);
+        request.setAmount(6000);
         
         IBankAdapter xBank = new XBankCreditAdaptee();
         BankCreditResponse xresponse = xBank.sendCreditRequest(request);
@@ -30,10 +30,16 @@ public class Adapter {
         BankCreditResponse yresponse = yBank.sendCreditRequest(request);
         System.out.println("yBank approved > " + yresponse.isApproved() + "\n");
         
+        IBankAdapter zBank = new ZBankCreditAdaptee();
+        BankCreditResponse zresponse = zBank.sendCreditRequest(request);
+        System.out.println("zBank approved > " + zresponse.isApproved() + "\n");
+        
         if(xresponse.isApproved()){
             System.out.println("xBank aprovó su crédito, felicidades!!");
         }else if(yresponse.isApproved()){
             System.out.println("yBank aprovó su crédito, felicidades!!");
+        }else if(zresponse.isApproved()){
+            System.out.println("zBank aprovó su crédito, felicidades!!");
         }else{
             System.out.println("Lo sentimos, su crédito no ha sido aprovado.");
         }
