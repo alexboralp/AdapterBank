@@ -18,19 +18,17 @@ public class Adapter {
         // TODO code application logic here
         
         //Request genérico para las dos APIs
-        BankCreditRequest request = new BankCreditRequest();
-        request.setCustomer("Oscar Blancarte");
-        request.setAmount(6000);
+        BankCreditRequest request = BanksCreditFactory.getBankCreditRequest("Oscar Blancarte", 6000);
         
-        IBankAdapter xBank = new XBankCreditAdaptee();
+        IBankAdapter xBank = BanksCreditFactory.getBankCreditAdaptee(BanksCreditFactory.BANK.XBANK);
         BankCreditResponse xresponse = xBank.sendCreditRequest(request);
         System.out.println("xBank approved > " + xresponse.isApproved() + "\n");
         
-        IBankAdapter yBank = new YBankCreditAdaptee();
+        IBankAdapter yBank = BanksCreditFactory.getBankCreditAdaptee(BanksCreditFactory.BANK.YBANK);
         BankCreditResponse yresponse = yBank.sendCreditRequest(request);
         System.out.println("yBank approved > " + yresponse.isApproved() + "\n");
         
-        IBankAdapter zBank = new ZBankCreditAdaptee();
+        IBankAdapter zBank = BanksCreditFactory.getBankCreditAdaptee(BanksCreditFactory.BANK.ZBANK);
         BankCreditResponse zresponse = zBank.sendCreditRequest(request);
         System.out.println("zBank approved > " + zresponse.isApproved() + "\n");
         
