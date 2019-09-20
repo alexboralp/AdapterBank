@@ -10,7 +10,7 @@ package adapter;
  * @author aborbon
  */
 public class XBankCreditAPI {
-    public XBankCreditResponse sendCreditRequest(ZBankCreditRequest request) {
+    public XBankCreditResponse sendCreditRequest(XBankCreditRequest request) {
         XBankCreditResponse response = new XBankCreditResponse();
         
         if (request.getRequestAmount() <= 5000) {
